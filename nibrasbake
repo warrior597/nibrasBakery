@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nibras Bakery | Freshly Baked Happiness</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <style>
+    body { font-family: 'Quicksand', Arial, sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
+    .fade-in { animation: fadeIn 1.2s ease-in; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(30px);} to { opacity: 1; transform: none; } }
+  </style>
+</head>
+<body class="bg-[#fff6f1] text-[#444]">
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed w-full z-30 bg-[#fff6f1] shadow-sm transition-all">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+      <div class="flex items-center space-x-2">
+        <i class="fa-solid fa-cake-candles text-pink-400 text-2xl"></i>
+        <span class="font-bold text-xl text-[#c89f7b] tracking-wide">SweetCrumbs</span>
+      </div>
+      <div class="hidden md:flex space-x-8 font-semibold">
+        <a href="#home" class="hover:text-[#c89f7b] transition">Home</a>
+        <a href="#menu" class="hover:text-[#c89f7b] transition">Menu</a>
+        <a href="#about" class="hover:text-[#c89f7b] transition">About</a>
+        <a href="#gallery" class="hover:text-[#c89f7b] transition">Gallery</a>
+        <a href="#contact" class="hover:text-[#c89f7b] transition">Contact</a>
+        <a href="#order" class="hover:text-[#c89f7b] transition">Order</a>
+      </div>
+      <!-- Hamburger -->
+      <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#fff6f1] px-4 pb-4">
+      <a href="#home" class="block py-2">Home</a>
+      <a href="#menu" class="block py-2">Menu</a>
+      <a href="#about" class="block py-2">About</a>
+      <a href="#gallery" class="block py-2">Gallery</a>
+      <a href="#contact" class="block py-2">Contact</a>
+      <a href="#order" class="block py-2">Order</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="pt-24 pb-16 fade-in bg-gradient-to-b from-[#f7caca] to-[#fff6f1]">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center px-4">
+      <div class="flex-1 text-center md:text-left">
+        <h1 class="text-4xl md:text-6xl font-bold text-[#c89f7b] mb-4">Freshly Baked Happiness</h1>
+        <p class="text-lg md:text-2xl text-[#444] mb-8">Handcrafted breads, cakes, and treats made with love.</p>
+        <div class="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
+          <a href="#menu" class="rounded-full bg-[#c89f7b] text-white px-8 py-3 font-semibold shadow hover:bg-[#a87c5a] transition">Explore Menu</a>
+          <a href="#order" class="rounded-full border-2 border-[#c89f7b] text-[#c89f7b] px-8 py-3 font-semibold hover:bg-[#c89f7b] hover:text-white transition">Order Online</a>
+        </div>
+      </div>
+      <div class="flex-1 mt-10 md:mt-0 flex justify-center">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Bakery Hero" class="rounded-3xl shadow-lg w-full max-w-md object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="py-16 bg-[#fff6f1]">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-[#c89f7b] mb-10">Our Menu</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <!-- Menu Item Example -->
+        <div class="bg-white rounded-2xl shadow p-4 flex flex-col items-center hover:shadow-lg transition">
+          <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="Chocolate Cake" class="rounded-xl w-32 h-32 object-cover mb-4" />
+          <h3 class="font-bold text-lg mb-1">Chocolate Cake</h3>
+          <p class="text-sm text-gray-500 mb-2">Rich, moist chocolate cake with creamy frosting.</p>
+          <span class="font-semibold text-[#c89f7b] mb-2">$18.00</span>
+          <button class="add-to-cart rounded-full bg-[#f7caca] text-[#c89f7b] px-5 py-2 font-semibold shadow hover:bg-[#c89f7b] hover:text-white transition flex items-center gap-2"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+        </div>
+        <!-- Repeat for more items -->
+        <div class="bg-white rounded-2xl shadow p-4 flex flex-col items-center hover:shadow-lg transition">
+          <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" alt="Croissant" class="rounded-xl w-32 h-32 object-cover mb-4" />
+          <h3 class="font-bold text-lg mb-1">Butter Croissant</h3>
+          <p class="text-sm text-gray-500 mb-2">Flaky, buttery croissants baked fresh daily.</p>
+          <span class="font-semibold text-[#c89f7b] mb-2">$3.50</span>
+          <button class="add-to-cart rounded-full bg-[#f7caca] text-[#c89f7b] px-5 py-2 font-semibold shadow hover:bg-[#c89f7b] hover:text-white transition flex items-center gap-2"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+        </div>
+        <div class="bg-white rounded-2xl shadow p-4 flex flex-col items-center hover:shadow-lg transition">
+          <img src="https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" alt="Sourdough Bread" class="rounded-xl w-32 h-32 object-cover mb-4" />
+          <h3 class="font-bold text-lg mb-1">Sourdough Bread</h3>
+          <p class="text-sm text-gray-500 mb-2">Artisan sourdough with a crisp crust and tangy flavor.</p>
+          <span class="font-semibold text-[#c89f7b] mb-2">$6.00</span>
+          <button class="add-to-cart rounded-full bg-[#f7caca] text-[#c89f7b] px-5 py-2 font-semibold shadow hover:bg-[#c89f7b] hover:text-white transition flex items-center gap-2"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+        </div>
+        <div class="bg-white rounded-2xl shadow p-4 flex flex-col items-center hover:shadow-lg transition">
+          <img src="https://images.unsplash.com/photo-1505250469679-203ad9ced0cb?auto=format&fit=crop&w=400&q=80" alt="Cookies" class="rounded-xl w-32 h-32 object-cover mb-4" />
+          <h3 class="font-bold text-lg mb-1">Chocolate Chip Cookies</h3>
+          <p class="text-sm text-gray-500 mb-2">Chewy cookies loaded with chocolate chips.</p>
+          <span class="font-semibold text-[#c89f7b] mb-2">$2.00</span>
+          <button class="add-to-cart rounded-full bg-[#f7caca] text-[#c89f7b] px-5 py-2 font-semibold shadow hover:bg-[#c89f7b] hover:text-white transition flex items-center gap-2"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Section -->
+  <section id="order" class="py-16 bg-[#f7caca]">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-[#c89f7b] mb-8">Order Online & Home Delivery</h2>
+      <form id="order-form" class="bg-white rounded-2xl shadow p-8 space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label class="block font-semibold mb-1">Full Name</label>
+            <input type="text" name="name" required class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-[#c89f7b]" />
+          </div>
+          <div>
+            <label class="block font-semibold mb-1">Phone Number</label>
+            <input type="tel" name="phone" required class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-[#c89f7b]" />
+          </div>
+          <div>
+            <label class="block font-semibold mb-1">Email</label>
+            <input type="email" name="email" required class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-[#c89f7b]" />
+          </div>
+          <div>
+            <label class="block font-semibold mb-1">Delivery Address</label>
+            <input type="text" name="address" required class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-[#c89f7b]" placeholder="123 Main St, City" />
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label class="block font-semibold mb-1">Preferred Delivery Date</label>
+            <input type="date" name="date" required class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-[#c89f7b]" />
+          </div>
+          <div>
+            <label class="block font-semibold mb-1">Preferred Delivery Time</label>
+            <input type="time" name="time" required class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-[#c89f7b]" />
+          </div>
+        </div>
+        <div>
+          <label class="block font-semibold mb-1">Special Instructions</label>
+          <textarea name="instructions" rows="2" class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-[#c89f7b]"></textarea>
+        </div>
+        <div class="flex items-center gap-4">
+          <i class="fa fa-truck text-[#c89f7b] text-xl"></i>
+          <span class="text-sm">Estimated delivery: 30-60 min | Fee: $3.00</span>
+        </div>
+        <button type="submit" class="rounded-full bg-[#c89f7b] text-white px-8 py-3 font-semibold shadow hover:bg-[#a87c5a] transition w-full">Place Order</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup Section -->
+  <section id="signup" class="py-12 bg-[#fff6f1]">
+    <div class="max-w-xl mx-auto px-4">
+      <div class="bg-white rounded-2xl shadow p-8">
+        <h2 class="text-2xl font-bold text-[#c89f7b] mb-4 text-center">Join Our Newsletter</h2>
+        <form id="newsletter-form" class="flex flex-col md:flex-row gap-4 items-center justify-center">
+          <input type="text" name="newsletter-name" placeholder="Your Name" class="rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-[#c89f7b] w-full md:w-auto" required />
+          <input type="email" name="newsletter-email" placeholder="Your Email" class="rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-[#c89f7b] w-full md:w-auto" required />
+          <label class="flex items-center gap-2 text-xs">
+            <input type="checkbox" name="marketing" class="accent-[#c89f7b]" />
+            I agree to receive marketing emails
+          </label>
+          <button type="submit" class="rounded-full bg-[#c89f7b] text-white px-6 py-2 font-semibold shadow hover:bg-[#a87c5a] transition">Sign Up</button>
+        </form>
+        <div id="newsletter-thankyou" class="hidden text-green-600 text-center mt-4 font-semibold">Thank you for signing up!</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="py-16 bg-[#f7caca]">
+    <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
+      <div class="flex-1">
+        <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=600&q=80" alt="Bakery Team" class="rounded-2xl shadow-lg w-full object-cover" />
+      </div>
+      <div class="flex-1">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#c89f7b] mb-4">About Nibras Bakery</h2>
+        <p class="text-lg mb-4">Nibras Bakery is a family-owned bakery passionate about bringing joy to your table. We use only the finest organic ingredients and traditional recipes to craft breads, cakes, and pastries that warm the heart and delight the senses.</p>
+        <p class="text-md text-gray-700">From our kitchen to your home, every treat is made with love and care. Thank you for supporting local, wholesome baking!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-16 bg-[#fff6f1]">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-[#c89f7b] mb-10">Gallery</h2>
+      <div class="columns-2 md:columns-3 gap-4 space-y-4">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Gallery 1" class="rounded-xl shadow hover:scale-105 hover:z-10 transition cursor-pointer gallery-img" />
+        <img src="https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" alt="Gallery 2" class="rounded-xl shadow hover:scale-105 hover:z-10 transition cursor-pointer gallery-img" />
+        <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" alt="Gallery 3" class="rounded-xl shadow hover:scale-105 hover:z-10 transition cursor-pointer gallery-img" />
+        <img src="https://images.unsplash.com/photo-1505250469679-203ad9ced0cb?auto=format&fit=crop&w=400&q=80" alt="Gallery 4" class="rounded-xl shadow hover:scale-105 hover:z-10 transition cursor-pointer gallery-img" />
+      </div>
+      <!-- Lightbox Modal -->
+      <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+        <img id="lightbox-img" src="" alt="Large view" class="max-h-[80vh] rounded-xl shadow-lg" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-[#f7caca]">
+    <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#c89f7b] mb-4">Contact Us</h2>
+        <form id="contact-form" class="space-y-4">
+          <div>
+            <label class="block font-semibold mb-1">Name</label>
+            <input type="text" name="contact-name" required class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-[#c89f7b]" />
+          </div>
+          <div>
+            <label class="block font-semibold mb-1">Email</label>
+            <input type="email" name="contact-email" required class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-[#c89f7b]" />
+          </div>
+          <div>
+            <label class="block font-semibold mb-1">Message</label>
+            <textarea name="contact-message" rows="3" required class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-[#c89f7b]"></textarea>
+          </div>
+          <button type="submit" class="rounded-full bg-[#c89f7b] text-white px-8 py-3 font-semibold shadow hover:bg-[#a87c5a] transition">Send Message</button>
+        </form>
+        <div class="mt-6 space-y-2">
+          <div class="flex items-center gap-2"><i class="fa fa-phone text-[#c89f7b]"></i> <span>+1 234 567 8901</span></div>
+          <div class="flex items-center gap-2"><i class="fa fa-envelope text-[#c89f7b]"></i> <span>hello@nibrasbakery.com</span></div>
+          <div class="flex items-center gap-2"><i class="fa fa-clock text-[#c89f7b]"></i> <span>Mon-Sat: 8am - 7pm</span></div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-4">
+        <iframe class="rounded-xl shadow w-full h-64" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537363153169!3d-37.81627977975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f1f1f1f1%3A0x5045675218ce6e0!2sBakery!5e0!3m2!1sen!2sau!4v1611812345678!5m2!1sen!2sau" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#c89f7b] text-white py-8 mt-8">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <div class="flex items-center gap-2 mb-2">
+          <i class="fa-solid fa-cake-candles text-pink-200 text-xl"></i>
+          <span class="font-bold text-lg">SweetCrumbs</span>
+        </div>
+        <p class="text-sm">Handcrafted with love in every crumb.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Quick Links</h4>
+        <ul class="space-y-1">
+          <li><a href="#home" class="hover:underline">Home</a></li>
+          <li><a href="#menu" class="hover:underline">Menu</a></li>
+          <li><a href="#about" class="hover:underline">About</a></li>
+          <li><a href="#gallery" class="hover:underline">Gallery</a></li>
+          <li><a href="#contact" class="hover:underline">Contact</a></li>
+          <li><a href="#order" class="hover:underline">Order</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Follow Us</h4>
+        <div class="flex gap-4 text-2xl">
+          <a href="#" class="hover:text-pink-200"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="hover:text-pink-200"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="hover:text-pink-200"><i class="fab fa-pinterest"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Newsletter</h4>
+        <form id="footer-newsletter" class="flex flex-col gap-2">
+          <input type="email" placeholder="Your Email" class="rounded-lg border border-gray-300 px-3 py-1 text-[#444]" required />
+          <button type="submit" class="rounded-full bg-pink-200 text-[#c89f7b] px-4 py-1 font-semibold shadow hover:bg-pink-300 transition">Sign Up</button>
+        </form>
+      </div>
+    </div>
+    <div class="text-center text-xs mt-6">© 2025 SweetCrumbs Bakery. All rights reserved.</div>
+  </footer>
+
+  <!-- Floating Order Now Button (Mobile) -->
+  <a href="#order" class="fixed bottom-6 right-6 z-40 md:hidden bg-[#c89f7b] text-white rounded-full shadow-lg px-6 py-3 flex items-center gap-2 text-lg font-semibold hover:bg-[#a87c5a] transition"><i class="fa fa-truck"></i> Order Now</a>
+
+  <!-- Confirmation Modal -->
+  <div id="order-modal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-2xl shadow-lg p-8 max-w-sm w-full text-center">
+      <i class="fa fa-check-circle text-green-500 text-4xl mb-4"></i>
+      <h3 class="text-xl font-bold mb-2">Order Placed!</h3>
+      <p class="mb-4">Thank you for your order. We'll bake it fresh and deliver it soon!</p>
+      <button id="close-modal" class="rounded-full bg-[#c89f7b] text-white px-6 py-2 font-semibold shadow hover:bg-[#a87c5a] transition">Close</button>
+    </div>
+  </div>
+
+  <!-- Scripts for interactivity -->
+  <script type="text/javascript">
+    // Navbar sticky shadow
+    window.addEventListener('scroll', function() {
+      const nav = document.getElementById('navbar');
+      if(window.scrollY > 10) nav.classList.add('shadow-lg');
+      else nav.classList.remove('shadow-lg');
+    });
+    // Hamburger menu
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    // Gallery Lightbox
+    document.querySelectorAll('.gallery-img').forEach(img => {
+      img.addEventListener('click', function() {
+        document.getElementById('lightbox-img').src = this.src;
+        document.getElementById('lightbox').classList.remove('hidden');
+      });
+    });
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if(e.target === this) this.classList.add('hidden');
+    });
+    // Newsletter form
+    document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('newsletter-thankyou').classList.remove('hidden');
+      this.reset();
+    });
+    // Footer newsletter
+    document.getElementById('footer-newsletter').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for signing up!');
+      this.reset();
+    });
+    // Order form modal
+    document.getElementById('order-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('order-modal').classList.remove('hidden');
+      this.reset();
+    });
+    document.getElementById('close-modal').addEventListener('click', function() {
+      document.getElementById('order-modal').classList.add('hidden');
+    });
+    // Add to Cart (demo only)
+    document.querySelectorAll('.add-to-cart').forEach(btn => {
+      btn.addEventListener('click', function() {
+        alert('Added to cart! (Demo only)');
+      });
+    });
+  </script>
+</body>
+</html>
